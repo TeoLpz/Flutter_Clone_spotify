@@ -31,7 +31,9 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Registro'),
+        title: const Text('Registro',  style: TextStyle(
+    color: Color(0xFFFAF6F9),
+  ),),
         backgroundColor: Colors.black,
         elevation: 0,
       ),
@@ -40,6 +42,11 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+                Image.asset(
+              'lib/assets/logo.png', // Ruta de la imagen en tu carpeta de assets
+              width: 100, // Ancho opcional
+              height: 100, // Alto opcional
+            ),
             const Text(
               'Crea una cuenta en Spotify',
               style: TextStyle(
@@ -86,7 +93,9 @@ class _RegisterPageState extends State<RegisterPage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _register,
-              child: const Text('Registrarse'),
+              child: const Text('Registrarse',  style: TextStyle(
+    color: Color(0xFFFAF6F9),
+  ),),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF1DB954), // Verde de Spotify
                 padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),

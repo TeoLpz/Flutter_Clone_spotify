@@ -79,8 +79,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Iniciar Sesión'),
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFF000000),
         elevation: 0,
       ),
       body: Padding(
@@ -88,6 +87,11 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset(
+              'lib/assets/logo.png', // Ruta de la imagen en tu carpeta de assets
+              width: 100, // Ancho opcional
+              height: 100, // Alto opcional
+            ),
             const Text(
               'Bienvenido de nuevo a Spotify',
               style: TextStyle(
@@ -134,10 +138,14 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _loginWithEmail,
-              child: const Text('Iniciar sesión'),
+              child: const Text(
+                'Iniciar sesión',
+                style: TextStyle(color: Color(0xFFfaf6f9)),
+              ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF1DB954), // Verde de Spotify
-                padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -156,14 +164,17 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 40),
             ElevatedButton.icon(
               onPressed: _handleGoogleSignIn,
-              icon: const Icon(
-                MaterialCommunityIcons.google,
-                color: Colors.white,
+              icon: Image.asset(
+                'lib/assets/google_icon.png', // Ruta de tu imagen
+                width: 25, // Ajusta el ancho de la imagen
+                height: 25, // Ajusta la altura de la imagen
               ),
-              label: const Text('Iniciar sesión con Google'),
+              label: const Text('Iniciar sesión con Google',
+                  style: TextStyle(color: Color(0xFFfaf6f9))),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
-                padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                   side: const BorderSide(color: Colors.grey),
