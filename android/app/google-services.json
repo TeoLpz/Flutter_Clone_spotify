@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "487163254179",
+    "project_id": "updatespotify-82675",
+    "storage_bucket": "updatespotify-82675.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487163254179:android:15d7997807d2379848b616",
+        "android_client_info": {
+          "package_name": "com.example.spotify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487163254179-fna83t7fq0570gl5bgd9939le2lrajus.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spotify",
+            "certificate_hash": "1159c367323f9a091c1b5215e9e700f106c3ed4d"
+          }
+        },
+        {
+          "client_id": "487163254179-tergs1mngpe7bpv8s1773ffh8a2f4fhk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2PxfzYhhilWdb9fvw7UTMF4Hq7uShn4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487163254179-tergs1mngpe7bpv8s1773ffh8a2f4fhk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
