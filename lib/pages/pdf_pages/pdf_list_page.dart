@@ -8,7 +8,7 @@ class PdfListPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Lista de PDFs',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
         ),
         backgroundColor: Color(0xFF121212), // Fondo oscuro típico de Spotify
         elevation: 0,

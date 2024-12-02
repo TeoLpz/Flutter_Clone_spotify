@@ -2,16 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:spotify/components/buttom_navbar.dart';
 
-
-
 class HomePage extends StatelessWidget {
+  // Lista de imágenes para canciones y playlists
+  final List<String> songImages = [
+    'assets/huesped.jpg',
+    'assets/song1.jpg',
+    'assets/song2.jpg',
+    'assets/song3.jpg',
+    'assets/song4.jpg',
+    'assets/song5.jpg',
+    'assets/song6.jpg',
+    'assets/song7.jpg',
+    'assets/song8.jpg',
+    'assets/song9.jpg',
+  ];
+
+  final List<String> playlistImages = [
+    'assets/playlist1.jpg',
+    'assets/playlist2.jpg',
+    'assets/playlist3.jpg',
+    'assets/playlist4.jpg',
+    'assets/playlist5.jpg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance
-          .authStateChanges(), // Escucha cambios en el estado de autenticación
+      stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
-        // Si el estado de la autenticación es null (usuario no autenticado)
         if (!snapshot.hasData) {
           return Scaffold(
             body: Center(
@@ -63,7 +81,7 @@ class HomePage extends StatelessWidget {
                   height: 150,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: songImages.length,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -71,8 +89,8 @@ class HomePage extends StatelessWidget {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://via.placeholder.com/100',
+                              child: Image.asset(
+                                songImages[index],
                                 width: 100,
                                 height: 100,
                                 fit: BoxFit.cover,
@@ -81,8 +99,8 @@ class HomePage extends StatelessWidget {
                             const SizedBox(height: 8),
                             Text(
                               'Canción ${index + 1}',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 14),
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 14),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ],
@@ -108,13 +126,13 @@ class HomePage extends StatelessWidget {
                 ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 5,
+                  itemCount: playlistImages.length,
                   itemBuilder: (context, index) {
                     return ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://via.placeholder.com/50',
+                        child: Image.asset(
+                          playlistImages[index],
                           width: 50,
                           height: 50,
                           fit: BoxFit.cover,

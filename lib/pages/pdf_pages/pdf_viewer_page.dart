@@ -44,16 +44,56 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black, // Fondo oscuro
       appBar: AppBar(
-        title: Text('Visor de PDF'),
+        backgroundColor: Colors.black,
+        elevation: 0,
+        title: Row(
+          children: [
+            const SizedBox(width: 10),
+            const Text(
+              'PDF Viewer',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ],
+        ),
       ),
-      body: loading
-          ? Center(child: CircularProgressIndicator())
-          : localPath.isNotEmpty
-              ? PDFView(
-                  filePath: localPath,
-                )
-              : Center(child: Text("Error al cargar el PDF")),
+      body: Column(
+        children: [
+          Expanded(
+            child: loading
+                ? Center(
+                    child: CircularProgressIndicator(
+                      color: Colors.green, // Color verde estilo Spotify
+                    ),
+                  )
+                : localPath.isNotEmpty
+                    ? Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[850], // Fondo oscuro para PDF
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        margin: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(8),
+                        child: PDFView(
+                          filePath: localPath,
+                          enableSwipe: true,
+                          swipeHorizontal: true,
+                        ),
+                      )
+                    : const Center(
+                        child: Text(
+                          "Error al cargar el PDF",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ),
+          ),
+        ],
+      ),
     );
   }
 }

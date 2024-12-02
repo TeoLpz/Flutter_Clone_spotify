@@ -22,7 +22,7 @@ class _PlaylistListPageState extends State<PlaylistListPage> {
       appBar: AppBar(
         title: Text(
           'Mis Playlists',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
         ),
         backgroundColor: Color(0xFF121212), // Fondo oscuro de Spotify
         elevation: 0,
