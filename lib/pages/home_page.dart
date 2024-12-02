@@ -5,7 +5,7 @@ import 'package:spotify/components/buttom_navbar.dart';
 class HomePage extends StatelessWidget {
   // Lista de imágenes para canciones y playlists
   final List<String> songImages = [
-    'assets/huesped.jpg',
+    'assets/abstract.jpg',
     'assets/song1.jpg',
     'assets/song2.jpg',
     'assets/song3.jpg',
@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
             elevation: 0,
             title: const Text(
               'Inicio',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,color: Colors.white,),
             ),
             actions: [
               IconButton(

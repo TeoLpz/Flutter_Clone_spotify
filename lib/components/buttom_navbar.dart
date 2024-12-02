@@ -22,7 +22,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
     SearchPage(),
     PlaylistListPage(),
     PdfListPage(),
-    
   ];
 
   int _selectedIndex = 0;
@@ -44,24 +43,25 @@ class _BottomNavbarState extends State<BottomNavbar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Inicio',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: 'Buscar',
           ),
-                      BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.music_note),
             label: 'Playlist',
           ),
-            BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.picture_as_pdf),
-            label: 'Reader',
+            label: 'Lector',
           ),
         ],
         selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: const Color.fromARGB(255, 226, 226, 226),
         showUnselectedLabels: true,
+        backgroundColor: const Color.fromARGB(255, 32, 32, 32),
       ),
     );
   }

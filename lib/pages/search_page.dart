@@ -87,8 +87,8 @@ class _SearchPageState extends State<SearchPage> {
                         return ListTile(
                           leading: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://via.placeholder.com/50',
+                            child: Image.asset(
+                              'assets/abstract.jpg',
                               width: 50,
                               height: 50,
                               fit: BoxFit.cover,
