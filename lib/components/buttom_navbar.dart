@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify/pages/home_page.dart';
 import 'package:spotify/pages/search_page.dart';
 import 'package:spotify/pages/pdf_pages/pdf_list_page.dart';
-// import 'package:spotify/pages/form_page.dart';
+import 'package:spotify/pages/playlist_page.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -20,7 +20,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final List<Widget> _pages = [
     HomePage(),
     SearchPage(),
-    PdfListPage()
+    PlaylistListPage(),
+    PdfListPage(),
+    
   ];
 
   int _selectedIndex = 0;
@@ -47,6 +49,10 @@ class _BottomNavbarState extends State<BottomNavbar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
+          ),
+                      BottomNavigationBarItem(
+            icon: Icon(Icons.music_note),
+            label: 'Playlist',
           ),
             BottomNavigationBarItem(
             icon: Icon(Icons.picture_as_pdf),
