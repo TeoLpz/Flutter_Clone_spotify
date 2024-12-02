@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'lib/assets/logo.png', // Ruta de la imagen en tu carpeta de assets
+              'assets/logo.png', // Ruta de la imagen en tu carpeta de assets
               width: 100, // Ancho opcional
               height: 100, // Alto opcional
             ),
@@ -165,7 +165,7 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton.icon(
               onPressed: _handleGoogleSignIn,
               icon: Image.asset(
-                'lib/assets/google_icon.png', // Ruta de tu imagen
+                'assets/google_icon.png', // Ruta de tu imagen
                 width: 25, // Ajusta el ancho de la imagen
                 height: 25, // Ajusta la altura de la imagen
               ),

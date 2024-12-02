@@ -4,11 +4,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:spotify/register_page.dart';
 import 'package:spotify/login_page.dart';
+import 'package:spotify/msg_firebase/message_api.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 // import 'package:spotify/pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await FirebaseAnalytics.instance.logAppOpen();
+  await MessageApi().initNotification();
   runApp(const MyApp());
 }
 

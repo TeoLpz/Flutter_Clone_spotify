@@ -43,7 +43,7 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
                 Image.asset(
-              'lib/assets/logo.png', // Ruta de la imagen en tu carpeta de assets
+              'assets/logo.png', // Ruta de la imagen en tu carpeta de assets
               width: 100, // Ancho opcional
               height: 100, // Alto opcional
             ),
